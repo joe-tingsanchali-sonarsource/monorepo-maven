@@ -9,6 +9,8 @@ node {
         ${mvn}/bin/mvn clean verify sonar:sonar 
           -Dsonar.projectKey=monorepo-maven-mod1
           -Dsonar.projectName=monorepo-maven-mod1
+          -Dsonar.inclusions=module1/src/main/**
+          -Dsonar.test.inclusions=module1/src/test/**
       """
     }
   }
