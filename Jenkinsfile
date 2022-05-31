@@ -6,7 +6,7 @@ node {
     def mvn = tool 'Default Maven';
     withSonarQubeEnv() {
       sh """
-        ${mvn}/bin/mvn clean verify sonar:sonar \\
+        ${mvn}/bin/mvn clean verify -X sonar:sonar \\
           -Dsonar.projectKey=monorepo-maven-mod1 \\
           -Dsonar.projectName=monorepo-maven-mod1 \\
           -Dsonar.inclusions=module1/src/main/** \\
