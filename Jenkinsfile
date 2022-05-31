@@ -4,7 +4,7 @@ node {
   }
   stage('SonarQube Analysis') {
     def mvn = tool 'Default Maven';
-    withSonarQubeEnv() {
+    withSonarQubeEnv('local89') {
       sh """
         ${mvn}/bin/mvn clean verify -X sonar:sonar \\
           -Dsonar.projectKey=monorepo-maven-mod1 \\
