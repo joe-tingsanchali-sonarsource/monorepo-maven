@@ -3,6 +3,12 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
+    when {
+      anyOf {
+        changeset 'module1/src/main/**'
+        changeRequest()
+      }
+    }
     def mvn = tool 'Default Maven';
     withSonarQubeEnv('local89') {
       sh """
