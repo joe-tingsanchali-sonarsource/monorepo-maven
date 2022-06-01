@@ -13,6 +13,7 @@ public class Module1 {
   public void uncovered() {
     System.out.println("This method is not covered");
     System.out.println("Just here for the ride");
+    System.out.println("Me as well");
   }
 
 }
