@@ -36,8 +36,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
-          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
-            -Dsonar.projectKey=monorepo-maven-mod1
-            -Dsonar.projectName=monorepo-maven-mod1
-            -Dsonar.inclusions=module1/src/main/**
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+            -Dsonar.projectKey=monorepo-maven-mod1 \
+            -Dsonar.projectName=monorepo-maven-mod1 \
+            -Dsonar.inclusions=module1/src/main/** \
             -Dsonar.test.inclusions=module1/src/test/**
